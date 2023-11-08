@@ -1,0 +1,39 @@
+.primary.iconTextButton,
+.secondary.iconTextButton {
+  display: flex;
+  outline: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  padding: 16px 24px;
+  border-radius: 16px;
+  background-color: transparent;
+  transition: background 0.2s ease-in;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Primary */
+.primary.iconTextButton.full {
+  background-color: var(--primary);
+  color: var(--white);
+}
+.primary.iconTextButton.full:hover,
+.primary.iconTextButton.bordered:hover {
+  background-color: var(--primary-darker);
+  color: var(--white);
+}
+.primary.iconTextButton.bordered {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+/* Secondary */
+.secondary.iconTextButton.full {
+  background-color: gainsboro;
+  color: white;
+}
+
+.secondary.iconTextButton.bordered {
+  border: 1px solid gray;
+  color: gray;
+}
