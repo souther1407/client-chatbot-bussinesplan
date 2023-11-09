@@ -8,4 +8,24 @@
   display: flex;
   flex-direction: column;
   padding: 16px;
+  position: relative;
+  justify-content: center;
+}
+
+.textShadow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.3;
+}
+
+.textShadow > :first-child {
+  margin-right: 16px;
+}
+
+.input {
+  position: absolute;
+  width: 96%;
+  bottom: 16px;
+  left: 16px;
 }

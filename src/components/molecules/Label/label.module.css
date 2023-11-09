@@ -1,0 +1,9 @@
+.label {
+  border-radius: 16px;
+  width: fit-content;
+  padding: 4px 24px;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  height: fit-content;
+}

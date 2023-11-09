@@ -2,10 +2,14 @@
 .title {
   font-size: inherit;
   line-height: 1.7;
+  color: var(--white);
 }
 
 .text {
   font-size: 1rem;
+}
+.transparent {
+  color: var(--background);
 }
 
 .title {
