@@ -1,9 +1,13 @@
-import { useState } from "react";
-import viteLogo from "/vite.svg";
+import { Routes, Route } from "react-router-dom";
+import ChatBot from "./pages/ChatBot/ChatBot";
 import "./App.css";
 
 function App() {
-  return <div>inicio</div>;
+  return (
+    <Routes>
+      <Route path="/" element={<ChatBot />} />
+    </Routes>
+  );
 }
 
 export default App;

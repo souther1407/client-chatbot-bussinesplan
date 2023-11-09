@@ -19,8 +19,8 @@ const IconTextButton = ({
       onClick={onClick}
       {...otherProps}
     >
-      <Text {...textProps}>{children}</Text>
       {iconProps?.type && <Icon {...iconProps} />}
+      <Text {...textProps}>{children}</Text>
     </button>
   );
 };

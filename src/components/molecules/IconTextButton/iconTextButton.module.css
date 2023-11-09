@@ -4,12 +4,16 @@
   outline: none;
   border: 1px solid transparent;
   cursor: pointer;
-  padding: 16px 24px;
-  border-radius: 16px;
+  padding: 12px 24px;
+  border-radius: 8px;
   background-color: transparent;
   transition: background 0.2s ease-in;
-  justify-content: space-around;
   align-items: center;
+}
+
+.primary.iconTextButton i + *,
+.secondary.iconTextButton i + * {
+  margin-left: 8px;
 }
 
 /* Primary */
@@ -19,12 +23,12 @@
 }
 .primary.iconTextButton.full:hover,
 .primary.iconTextButton.bordered:hover {
-  background-color: var(--primary-darker);
+  background-color: var(--light-gray);
   color: var(--white);
 }
 .primary.iconTextButton.bordered {
-  border: 1px solid var(--primary);
-  color: var(--primary);
+  border: 1px solid var(--light-gray);
+  color: var(--light-gray);
 }
 
 /* Secondary */

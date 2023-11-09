@@ -1,0 +1,11 @@
+.asideNav {
+  background-color: var(--primary);
+  width: fit-content;
+  height: 100vh;
+  overflow: auto;
+  padding: 16px;
+}
+
+.addMore {
+  width: 300px;
+}

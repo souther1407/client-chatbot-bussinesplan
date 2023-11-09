@@ -20,7 +20,8 @@
   border: 1px solid var(--light-gray);
   padding: 20px 16px;
   border-radius: 8px;
-  background-color: transparent;
+  color: var(--white);
+  background-color: var(--primary);
   font-size: 1rem;
 }
 

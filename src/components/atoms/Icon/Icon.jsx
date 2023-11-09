@@ -52,7 +52,7 @@ import {
 } from "react-icons/ai";
 import { GiGears, GiTakeMyMoney } from "react-icons/gi";
 import { TfiArrowsCorner } from "react-icons/tfi";
-
+import { MdOutlineAdd } from "react-icons/md";
 import {
   BsArrowLeft,
   BsArrowRight,
@@ -65,11 +65,6 @@ import {
 import { CgArrowsV } from "react-icons/cg";
 import { FiClock } from "react-icons/fi";
 import styles from "./icon.module.css";
-import electricistaIcono from "../../../assets/electricistaIcono.svg";
-import jardineriaIcono from "../../../assets/jardineriaIcono.svg";
-import limpiezaIcono from "../../../assets/limpiezaIcono.svg";
-import paseadorIcono from "../../../assets/paseadorIcono.svg";
-import tutoriaIcono from "../../../assets/tutoriaIcono.svg";
 
 const Icon = ({ type, size, color = "inherit" }) => {
   const props = {
@@ -132,39 +127,7 @@ const Icon = ({ type, size, color = "inherit" }) => {
     youtube: <AiFillYoutube {...props} />,
     linkedin: <AiFillLinkedin {...props} />,
     clip: <AiOutlinePaperClip {...props} />,
-    Eléctrico: (
-      <img
-        src={electricistaIcono}
-        style={{ width: size, height: size, transform: "scale(2.5)" }}
-      />
-    ),
-    Jardinería: (
-      <img
-        src={jardineriaIcono}
-        style={{ width: size, height: size, transform: "scale(2.5)" }}
-      />
-    ),
-    Limpieza: (
-      <img
-        src={limpiezaIcono}
-        style={{ width: size, height: size, transform: "scale(2.5)" }}
-      />
-    ),
-    "Pasear Perro": (
-      <img
-        src={paseadorIcono}
-        style={{ width: size, height: size, transform: "scale(2.5)" }}
-      />
-    ),
-    Tutoría: (
-      <img
-        src={tutoriaIcono}
-        style={{ width: size, height: size, transform: "scale(2.5)" }}
-      />
-    ),
-    "Diseño Interior": <GiTakeMyMoney {...props} />,
-    Automotriz: <GiTakeMyMoney {...props} />,
-    Gasfiteria: <GiTakeMyMoney {...props} />,
+    add: <MdOutlineAdd {...props} />,
   };
   return <i>{icons[type]}</i>;
 };
