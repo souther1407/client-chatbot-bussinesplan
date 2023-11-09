@@ -10,7 +10,7 @@ const ChatBot = () => {
       <AsideNav />
       <main className={styles.main}>
         <div className={styles.textShadow}>
-          <Text color="white" size={"3rem"}>
+          <Text bold color="white" size={"3rem"}>
             Paddawan
           </Text>
           <Label size={"1.5rem"}>Beta 0.0.1</Label>

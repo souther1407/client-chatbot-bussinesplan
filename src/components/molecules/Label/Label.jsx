@@ -4,7 +4,7 @@ import styles from "./label.module.css";
 const Label = ({ children, size }) => {
   return (
     <div className={styles.label}>
-      <Text size={size} color="transparent">
+      <Text size={size} bold color="transparent">
         {children}
       </Text>
     </div>
