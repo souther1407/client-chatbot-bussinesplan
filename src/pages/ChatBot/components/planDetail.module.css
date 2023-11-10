@@ -1,0 +1,8 @@
+.title {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--light-gray);
+  margin-bottom: 16px;
+}
+.titles {
+  width: 600px;
+}

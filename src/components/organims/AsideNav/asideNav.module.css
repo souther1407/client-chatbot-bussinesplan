@@ -9,3 +9,22 @@
 .addMore {
   width: 250px;
 }
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+.titles > * {
+  margin-top: 8px;
+}
+.title {
+  padding: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.title.selected {
+  background-color: var(--light-gray-transparent);
+  color: var(--white);
+}

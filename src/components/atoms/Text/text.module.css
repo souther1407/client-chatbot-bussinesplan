@@ -27,6 +27,9 @@
   font-weight: bold;
 }
 
+.strong {
+  color: var(--white);
+}
 .soft {
   color: gray;
 }

@@ -15,11 +15,13 @@ img {
   height: 100%;
 }
 :root {
-  --white: white;
+  --white: #b0b0b0;
   --black: #000212;
   --black-transparent: #1e22265e;
   --light-blue: #749bc2;
   --light-gray: #cccccc8e;
+  --light-gray-transparent: #cccccc15;
+  --light-gray-2: #8f8f8f;
   --light-blue-transparent: #ccd6dd;
   --blue: #4682a9;
   --dark-olive: #1e2226;

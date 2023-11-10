@@ -20,7 +20,9 @@ const IconTextButton = ({
       {...otherProps}
     >
       {iconProps?.type && <Icon {...iconProps} />}
-      <Text {...textProps}>{children}</Text>
+      <Text {...textProps} color="inherit">
+        {children}
+      </Text>
     </button>
   );
 };
