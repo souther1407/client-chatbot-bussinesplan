@@ -18,8 +18,8 @@
 
 /* Primary */
 .primary.iconTextButton.full {
-  background-color: var(--primary);
-  color: var(--white);
+  background-color: var(--white);
+  color: var(--background);
 }
 .primary.iconTextButton.full:hover,
 .primary.iconTextButton.bordered:hover {

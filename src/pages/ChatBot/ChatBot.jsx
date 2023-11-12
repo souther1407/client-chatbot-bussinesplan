@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import AsideNav from "../../components/organims/AsideNav/AsideNav";
 import styles from "./chatBot.module.css";
 import Input from "../../components/atoms/Input/Input";
 import Text from "../../components/atoms/Text/Text";
 import Label from "../../components/molecules/Label/Label";
 import PlanDetail from "./components/PlanDetail";
+import { useAuth } from "../../hooks/useAuth";
 const ChatBot = () => {
   const [promptSelected, setPromptSelected] = useState("");
   const [userInput, setUserInput] = useState("");
+  const { user } = useAuth();
+
   return (
     <div className={styles.chatBot}>
       <AsideNav onSelect={(prompt) => setPromptSelected(prompt)} />
