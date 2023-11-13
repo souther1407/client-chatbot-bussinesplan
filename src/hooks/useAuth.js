@@ -12,6 +12,8 @@ export const useAuth = () => {
         setUser(user);
         const token = await user.getIdToken();
         localStorage.setItem("token", token);
+      } else {
+        localStorage.removeItem("token");
       }
     });
   }, []);
