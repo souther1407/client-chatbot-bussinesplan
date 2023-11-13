@@ -5,6 +5,7 @@ import Input from "../../components/atoms/Input/Input";
 import Text from "../../components/atoms/Text/Text";
 import Label from "../../components/molecules/Label/Label";
 import PlanDetail from "./components/PlanDetail";
+import IconButton from "../../components/molecules/IconButton/IconButton";
 import { useAuth } from "../../hooks/useAuth";
 const ChatBot = () => {
   const [promptSelected, setPromptSelected] = useState("");
@@ -24,6 +25,9 @@ const ChatBot = () => {
               <Label size={"1.5rem"}>Beta 0.0.1</Label>
             </div>
             <div className={styles.input}>
+              <div className={styles.iconBtn}>
+                <IconButton icon={"send"} size="1.5rem" color="var(--white)" />
+              </div>
               <Input
                 placeholder={"Give Padda a business problem"}
                 id={"userPrompt"}

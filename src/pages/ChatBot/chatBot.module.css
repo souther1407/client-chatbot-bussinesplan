@@ -34,5 +34,13 @@
   position: absolute;
   width: 96%;
   bottom: 16px;
+
   left: 16px;
+}
+.iconBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 16px;
+  z-index: 500;
 }

@@ -52,6 +52,7 @@ import {
 } from "react-icons/ai";
 import { GiGears, GiTakeMyMoney } from "react-icons/gi";
 import { TfiArrowsCorner } from "react-icons/tfi";
+
 import { MdOutlineAdd } from "react-icons/md";
 import {
   BsArrowLeft,
@@ -60,6 +61,7 @@ import {
   BsFillCalculatorFill,
   BsShieldFillCheck,
   BsFillShieldLockFill,
+  BsFillSendFill,
   BsFillTrashFill,
 } from "react-icons/bs";
 import { CgArrowsV } from "react-icons/cg";
@@ -76,6 +78,7 @@ const Icon = ({ type, size, color = "inherit" }) => {
     loading: <AiOutlineLoading3Quarters {...props} />,
     card: <AiFillCreditCard {...props} />,
     arrowDown: <SlArrowDown {...props} />,
+    send: <BsFillSendFill {...props} />,
     arrowUp: <SlArrowUp {...props} />,
     bulb: <AiOutlineBulb {...props} />,
     phone: <AiFillPhone {...props} />,
