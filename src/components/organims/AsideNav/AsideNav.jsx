@@ -4,19 +4,7 @@ import Text from "../../atoms/Text/Text";
 import IconTextButton from "../../molecules/IconTextButton/IconTextButton";
 import { usePlansStore } from "../../../stores/usePlansStore";
 const AsideNav = ({ onSelect, selected }) => {
-  const titles = [
-    {
-      id: "1",
-      userPrompt: "ejemplo 1",
-    },
-    {
-      id: "2",
-      userPrompt: "ejemplo 2",
-    },
-  ];
-
   const { getPlans, plans } = usePlansStore((state) => state);
-
   useEffect(() => {
     getPlans();
   }, []);

@@ -31,7 +31,6 @@ export const usePlansStore = create((set) => ({
       const plans = await getPlans();
       set({ plans });
     } catch (error) {
-      alert(error.message);
     } finally {
       set({ loading: false });
     }
