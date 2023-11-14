@@ -1,5 +1,6 @@
 .chatBot {
   display: flex;
+  height: 100vh;
 }
 
 .main {
@@ -9,6 +10,8 @@
   flex-direction: column;
   padding: 16px;
   position: relative;
+  height: 100vh;
+  overflow: auto;
 }
 .newPrompt {
   flex-grow: 1;

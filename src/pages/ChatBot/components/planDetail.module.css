@@ -1,8 +1,43 @@
+.planDetail {
+  padding: 32px;
+}
 .title {
   padding: 16px 0;
   border-bottom: 1px solid var(--light-gray);
   margin-bottom: 16px;
+  background: var(--background);
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+.main {
+  margin-top: 32px;
 }
 .titles {
-  width: 600px;
+  width: 500px;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--light-gray);
+}
+.titles > :first-child {
+  margin-bottom: 12px;
+}
+
+.goal {
+  display: flex;
+}
+
+.tool {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 1px solid var(--light-gray);
+  padding-left: 12px;
+  margin-left: 12px;
+}
+
+.toolName {
+  border-bottom: 1px solid var(--light-gray);
+  padding-bottom: 8px;
+  margin-bottom: 8px;
 }

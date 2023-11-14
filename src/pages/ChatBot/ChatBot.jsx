@@ -7,14 +7,36 @@ import Label from "../../components/molecules/Label/Label";
 import PlanDetail from "./components/PlanDetail";
 import IconButton from "../../components/molecules/IconButton/IconButton";
 import { useAuth } from "../../hooks/useAuth";
+import { usePlansStore } from "../../stores/usePlansStore";
+import { LOGIN } from "../../utils/constants/routes";
+import LoadingScreen from "../../components/molecules/LoadingScreen/LoadingScreen";
+import { useNavigate } from "react-router-dom";
 const ChatBot = () => {
-  const [promptSelected, setPromptSelected] = useState("");
   const [userInput, setUserInput] = useState("");
+  const [promptSelected, setPromptSelected] = useState("");
   const { user } = useAuth();
+  const navitagte = useNavigate();
+  const { loading, planDetail, getPlanDetail, generatePlan } = usePlansStore(
+    (state) => state
+  );
 
+  const handleLoadPromptDetail = (id) => {
+    setPromptSelected(id);
+    if (id) {
+      getPlanDetail(id);
+    }
+  };
+  const handleGeneratePlan = async () => {
+    if (!user) return navitagte(LOGIN);
+    await generatePlan(userInput);
+    if (planDetail) {
+      setPromptSelected(planDetail.id);
+    }
+  };
   return (
     <div className={styles.chatBot}>
-      <AsideNav onSelect={(prompt) => setPromptSelected(prompt)} />
+      <AsideNav onSelect={handleLoadPromptDetail} selected={promptSelected} />
+      {loading && <LoadingScreen />}
       <main className={styles.main}>
         {!promptSelected && (
           <section className={styles.newPrompt}>
@@ -26,7 +48,12 @@ const ChatBot = () => {
             </div>
             <div className={styles.input}>
               <div className={styles.iconBtn}>
-                <IconButton icon={"send"} size="1.5rem" color="var(--white)" />
+                <IconButton
+                  icon={"send"}
+                  size="1.5rem"
+                  color="var(--white)"
+                  onClick={handleGeneratePlan}
+                />
               </div>
               <Input
                 placeholder={"Give Padda a business problem"}
@@ -39,9 +66,9 @@ const ChatBot = () => {
             </div>
           </section>
         )}
-        {promptSelected && (
+        {promptSelected && !loading && (
           <section className={styles.detail}>
-            <PlanDetail />
+            <PlanDetail detail={planDetail} />
           </section>
         )}
       </main>

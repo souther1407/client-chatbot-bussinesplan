@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./asideNav.module.css";
 import Text from "../../atoms/Text/Text";
 import IconTextButton from "../../molecules/IconTextButton/IconTextButton";
-const AsideNav = ({ onSelect }) => {
+import { usePlansStore } from "../../../stores/usePlansStore";
+const AsideNav = ({ onSelect, selected }) => {
   const titles = [
     {
       id: "1",
@@ -13,10 +14,14 @@ const AsideNav = ({ onSelect }) => {
       userPrompt: "ejemplo 2",
     },
   ];
-  const [selected, setSelected] = useState("");
-  const onChangePrompt = (value) => {
-    setSelected(value);
-    onSelect(value);
+
+  const { getPlans, plans } = usePlansStore((state) => state);
+
+  useEffect(() => {
+    getPlans();
+  }, []);
+  const onChangePrompt = (id) => {
+    onSelect(id);
   };
   return (
     <div className={styles.asideNav}>
@@ -31,22 +36,21 @@ const AsideNav = ({ onSelect }) => {
         </IconTextButton>
       </div>
       <div className={styles.titles}>
-        {titles.map((prompt) => (
+        {plans.map((prompt) => (
           <div
+            key={prompt.id}
             className={`${styles.title} ${
-              prompt.userPrompt === selected && styles.selected
+              prompt.id === selected && styles.selected
             }`}
-            onClick={() => onChangePrompt(prompt.userPrompt)}
+            onClick={() => onChangePrompt(prompt.id)}
           >
             <Text
               color={
-                prompt.userPrompt === selected && styles.selected
-                  ? "white"
-                  : "soft"
+                prompt.id === selected && styles.selected ? "white" : "soft"
               }
               size={"0.9rem"}
             >
-              {prompt.userPrompt}
+              {prompt.userMsg}
             </Text>
           </div>
         ))}
