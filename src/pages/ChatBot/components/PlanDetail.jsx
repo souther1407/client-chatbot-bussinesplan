@@ -52,10 +52,13 @@ const PlanDetail = ({ detail }) => {
                   <Text color="soft">
                     {toolsDescription[goal.tool].description}
                   </Text>
-                  <img
-                    src={toolsDescription[goal.tool].img}
-                    className={styles.img}
-                  />
+                  <div className={styles.imgTool}>
+                    <Text>Free Trial</Text>
+                    <img
+                      src={toolsDescription[goal.tool].img}
+                      className={styles.img}
+                    />
+                  </div>
                 </div>
               </div>
             </section>
