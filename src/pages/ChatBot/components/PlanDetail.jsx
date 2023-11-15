@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./planDetail.module.css";
 import Text from "../../../components/atoms/Text/Text";
 import Mark from "../../../components/atoms/Mark/Mark";
+import Step from "./Step.jsx";
 import { toolsDescription } from "../../../utils/constants/toolsdescription.js";
 const convertToArray = (obj = {}) => {
   return Object.values(obj);
@@ -26,6 +27,15 @@ const PlanDetail = ({ detail }) => {
                 <Text color="soft" size="0.9rem">
                   {goal.description}
                 </Text>
+              </div>
+              <div className={styles.steps}>
+                {convertToArray(goal.steps).map((s, index, arr) => (
+                  <Step title={s.title}>
+                    {convertToArray(s.steps).map((sub, index, arr) => (
+                      <Step title={sub.title}></Step>
+                    ))}
+                  </Step>
+                ))}
               </div>
             </section>
             <section className={styles.tool}>

@@ -1,5 +1,6 @@
 .planDetail {
-  padding: 32px;
+  padding: 8px;
+  padding-top: 32px;
 }
 .title {
   padding: 16px 0;
@@ -9,6 +10,9 @@
   position: fixed;
   width: 100%;
   top: 0;
+}
+.titleAndSteps {
+  width: 60%;
 }
 .main {
   margin-top: 32px;
@@ -30,6 +34,8 @@
 .tool {
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
+  flex-basis: 25%;
   justify-content: center;
   border-left: 1px solid var(--light-gray);
   padding-left: 12px;
