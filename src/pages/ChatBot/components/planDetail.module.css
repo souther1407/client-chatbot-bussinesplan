@@ -10,6 +10,7 @@
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 500;
 }
 .titleAndSteps {
   width: 60%;
@@ -43,6 +44,11 @@
   border-left: 1px solid var(--light-gray);
   padding-left: 12px;
   margin-left: 12px;
+}
+
+.toolCard {
+  position: sticky;
+  top: 25%;
 }
 
 .toolName {
