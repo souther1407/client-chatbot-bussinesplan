@@ -27,6 +27,9 @@
   margin-bottom: 12px;
 }
 
+.main > *:not(:last-child) {
+  margin-bottom: 32px;
+}
 .goal {
   display: flex;
 }

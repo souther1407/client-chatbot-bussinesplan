@@ -30,9 +30,12 @@ const PlanDetail = ({ detail }) => {
               </div>
               <div className={styles.steps}>
                 {convertToArray(goal.steps).map((s, index, arr) => (
-                  <Step title={s.title}>
+                  <Step title={s.title} textProps={{ bold: true }}>
                     {convertToArray(s.steps).map((sub, index, arr) => (
-                      <Step title={sub.title}></Step>
+                      <Step
+                        title={sub.title}
+                        textProps={{ color: "soft" }}
+                      ></Step>
                     ))}
                   </Step>
                 ))}
