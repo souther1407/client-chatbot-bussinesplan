@@ -3,12 +3,8 @@
   width: fit-content;
   min-height: 100vh;
   overflow: auto;
-
-  padding: 16px;
-}
-
-.addMore {
-  width: 250px;
+  width: 220px;
+  padding: 8px;
 }
 
 .titles {

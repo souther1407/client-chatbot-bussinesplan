@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./planDetail.module.css";
 import Text from "../../../components/atoms/Text/Text";
 import Mark from "../../../components/atoms/Mark/Mark";
-
+import { toolsDescription } from "../../../utils/constants/toolsdescription.js";
 const convertToArray = (obj = {}) => {
   return Object.values(obj);
 };
@@ -36,7 +36,13 @@ const PlanDetail = ({ detail }) => {
                   </Text>
                 </div>
                 <div className={styles.toolDesc}>
-                  <Text color="soft">Description</Text>
+                  <Text color="soft">
+                    {toolsDescription[goal.tool].description}
+                  </Text>
+                  <img
+                    src={toolsDescription[goal.tool].img}
+                    className={styles.img}
+                  />
                 </div>
               </div>
             </section>

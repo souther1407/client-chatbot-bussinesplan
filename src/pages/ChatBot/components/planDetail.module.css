@@ -41,3 +41,10 @@
   padding-bottom: 8px;
   margin-bottom: 8px;
 }
+
+.img {
+  width: 300px;
+  object-fit: cover;
+  height: 140px;
+  object-position: center;
+}
